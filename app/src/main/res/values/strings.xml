@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CleanAppDesignJetpack</string>
+    <string name="Set_password">Enter_password</string>
+    <string name="Set_email">Enter_email</string>
+</resources>
