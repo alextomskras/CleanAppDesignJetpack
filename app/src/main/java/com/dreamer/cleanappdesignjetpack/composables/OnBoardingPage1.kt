@@ -13,7 +13,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -25,8 +24,6 @@ import com.dreamer.cleanappdesignjetpack.R
 import com.dreamer.cleanappdesignjetpack.ui.theme.Arangish
 import com.dreamer.cleanappdesignjetpack.ui.theme.CleanAppDesignJetpackTheme
 import com.dreamer.cleanappdesignjetpack.ui.theme.Purplish
-import java.nio.file.Files.size
-import java.util.*
 
 
 @Preview(showBackground = true)
@@ -47,17 +44,29 @@ fun BgCard2() {
         }
     }
     Surface(color = Purplish, modifier = Modifier.fillMaxSize()) {
-        Column(verticalArrangement = Arrangement.Bottom, horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.offset(y = (-30).dp)
+
+    Column(verticalArrangement = Arrangement.Bottom, horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.offset(y = (-30).dp)
         ) {
             Row {
-                Box(modifier = Modifier.background(Color.Gray).size(10.dp).clip(CircleShape))
+                Box(modifier = Modifier
+                    .background(Color.Gray)
+                    .size(10.dp)
+                    .clip(CircleShape))
                 Spacer(modifier = Modifier.padding(horizontal = 4.dp))
-                Box(modifier = Modifier.background(Color.White).size(12.dp).clip(CircleShape))
+                Box(modifier = Modifier
+                    .background(Color.White)
+                    .size(12.dp)
+                    .clip(CircleShape))
                 Spacer(modifier = Modifier.padding(horizontal = 4.dp))
-                Box(modifier = Modifier.background(Color.Gray).size(10.dp).clip(CircleShape))
+                Box(modifier = Modifier
+                    .background(Color.Gray)
+                    .size(10.dp)
+                    .clip(CircleShape))
 
             }
-            Row(horizontalArrangement = Arrangement.SpaceBetween,modifier = Modifier.fillMaxWidth().padding(16.dp)) {
+            Row(horizontalArrangement = Arrangement.SpaceBetween,modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)) {
                 TextButton(onClick = {}) {
                     Text(text = "Skip", color = Color.White)
                 }
@@ -76,7 +85,9 @@ fun BgCard2() {
 
 @Composable
 fun MainCard2() {
-    Surface(color = Color.White, modifier = Modifier.height(600.dp).fillMaxWidth(),
+    Surface(color = Color.White, modifier = Modifier
+        .height(600.dp)
+        .fillMaxWidth(),
             shape = RoundedCornerShape(60.dp).copy(topStart = ZeroCornerSize, topEnd = ZeroCornerSize)) {
         Column(modifier = Modifier.padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally
         ) {
